@@ -1,230 +1,595 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aayoush Dahal - UI/UX &amp; Web Designer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet" />
-    <script
-        src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
-    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#1B9AF5"
-        data-border-radius="medium"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aayoush Dahal - Web Designer, UI/UX Designer, and Web Developer Portfolio">
+    <title>Aayoush Dahal | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
 
-<body
-    class="font-[Poppins] bg-gradient-to-br from-gray-900 via-slate-900 to-gray-950 text-gray-100 dark:from-gray-900 dark:via-slate-900 dark:to-gray-950 dark:text-gray-100">
-    <script>document.getElementById('theme-toggle').addEventListener('change', function () { document.documentElement.classList.toggle('dark'); });</script>
-    <nav class="fixed w-full bg-gray-800/60 backdrop-blur-lg z-50 border-b border-gray-700/50">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold text-custom">AD.</a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">AD<span>.</span></a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-custom transition-colors">Home</a>
-                    <a href="#about" class="text-gray-300 hover:text-custom transition-colors">About</a>
-                    <a href="#skills" class="text-gray-300 hover:text-custom transition-colors">Skills</a>
-                    <a href="#projects" class="text-gray-300 hover:text-custom transition-colors">Projects</a>
-                    <a href="#contact"
-                        class="bg-gradient-to-r from-custom to-blue-500 text-white px-6 py-2 !rounded-button hover:opacity-90 transition-all shadow-lg shadow-custom/20">Contact</a>
-                    <label class="relative inline-flex items-center cursor-pointer ml-4"><input type="checkbox" value=""
-                            class="sr-only peer" id="theme-toggle" />
-                        <div
-                            class="w-11 h-6 bg-gray-700 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-custom/10 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[&#39;&#39;] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-custom after:flex after:items-center after:justify-center after:text-[10px] after:content-[&#39;🌙&#39;] peer-checked:after:content-[&#39;☀️&#39;]">
-                        </div>
-                    </label>
-                </div>
-                <button class="md:hidden flex items-center">
-                    <i class="fas fa-bars text-gray-300"></i>
-                </button>
             </div>
         </div>
     </nav>
-    <section id="home" class="pt-32 pb-20">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1
-                        class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-300 text-transparent bg-clip-text">
-                        Hi, I&#39;m <span
-                            class="bg-gradient-to-r from-custom via-blue-500 to-purple-500 text-transparent bg-clip-text">Aayoush
-                            Dahal</span></h1>
-                    <p class="text-xl text-gray-400 mb-8">UI/UX &amp; Web Design Specialist with a passion for creating
-                        beautiful, functional, and user-centered digital experiences.</p>
-                    <a href="#projects"
-                        class="inline-flex items-center bg-gradient-to-r from-custom via-blue-500 to-purple-500 text-white px-8 py-3 !rounded-button hover:opacity-90 transition-all shadow-lg shadow-custom/20">
-                        View My Work
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Aayoush Dahal</h1>
+                    <div class="hero-title-wrapper">
+                        <span class="hero-title-static">I'm a </span>
+                        <span class="hero-title-dynamic" id="typed-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Crafting beautiful digital experiences through innovative web design,
+                        intuitive UI/UX, and powerful web development solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <span>View Portfolio</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Contact Me</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    </div>
                 </div>
-                <div class="relative">
-                    <img src="assets/myphoto2.jpg"
-                        alt="Aayoush Dahal" class="w-100 rounded-2xl shadow-lg" />
+                <div class="hero-image">
+                    <div class="hero-img-wrapper">
+                        <div class="hero-img-bg"></div>
+                        <img src="assets/20241128_160443.jpg" alt="Aayoush Dahal" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <div class="mouse"></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-img-wrapper">
+                        <img src="assets/20241229_085630.jpg" alt="About Aayoush" class="about-img">
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h3 class="stat-number" data-target="50">0</h3>
+                                <p class="stat-label">Projects Completed</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number" data-target="5">0</h3>
+                                <p class="stat-label">Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Passionate Designer & Developer</h3>
+                    <p>
+                        I'm Aayoush Dahal, a creative web designer and developer with a passion for
+                        crafting exceptional digital experiences. With expertise in UI/UX design and
+                        modern web technologies, I transform ideas into stunning, user-friendly websites.
+                    </p>
+                    <p>
+                        My approach combines aesthetic excellence with technical precision. I believe
+                        that great design isn't just about how it looks, but how it works. Every project
+                        I undertake is an opportunity to push boundaries and create something remarkable.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Pixel-Perfect Designs</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>User-Centric Approach</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Clean Code Standards</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Responsive & Modern</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary download-cv">
+                        <span>Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <section id="about" class="py-20 bg-gray-800">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-16">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <p class="text-gray-400 mb-6">I&#39;m a passionate UI/UX and Web Designer with over 5 years of
-                        experience in creating digital experiences that users love. My approach combines creativity with
-                        user-centered design principles to deliver solutions that are both beautiful and functional.</p>
-                    <p class="text-gray-400 mb-8">I specialize in:</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-custom mr-3"></i>
-                            <span class="text-gray-300">User Interface Design</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-custom mr-3"></i>
-                            <span class="text-gray-300">User Experience Design</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-custom mr-3"></i>
-                            <span class="text-gray-300">Responsive Web Design</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-custom mr-3"></i>
-                            <span class="text-gray-300">Interactive Prototyping</span>
-                        </li>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Offer</span>
+                <h2 class="section-title">My Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Web Designing</h3>
+                    <p>
+                        Creating visually stunning and modern websites that capture attention
+                        and deliver exceptional user experiences across all devices.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Modern Layouts</li>
+                        <li><i class="fas fa-check"></i> Brand Identity</li>
+                    </ul>
+                    <div class="service-overlay"></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                    <h3>UI/UX Designing</h3>
+                    <p>
+                        Designing intuitive interfaces with seamless user experiences that make
+                        digital products enjoyable, accessible, and conversion-focused.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> User Research</li>
+                        <li><i class="fas fa-check"></i> Wireframing</li>
+                        <li><i class="fas fa-check"></i> Prototyping</li>
+                    </ul>
+                    <div class="service-overlay"></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Building robust, scalable web applications with clean code, optimal
+                        performance, and cutting-edge technologies.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Frontend Development</li>
+                        <li><i class="fas fa-check"></i> Backend Integration</li>
+                        <li><i class="fas fa-check"></i> Performance Optimization</li>
+                    </ul>
+                    <div class="service-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+                <button class="filter-btn" data-filter="web-design">Web Design</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+            </div>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="Project">
+                </div>
+                <div class="modal-info">
+                    <h3 id="modal-title"></h3>
+                    <p class="modal-category" id="modal-category"></p>
+                    <p class="modal-description" id="modal-description"></p>
+                    <div class="modal-tech">
+                        <h4>Technologies Used:</h4>
+                        <div id="modal-tech-tags"></div>
+                    </div>
+                    <div class="modal-links">
+                        <a href="#" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="#" class="btn btn-secondary" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+            <div class="skills-content">
+                <div class="skills-bars">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS3 / Sass</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React / Next.js</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Figma / Adobe XD</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">UI/UX Design</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-circular">
+                    <div class="circular-skill">
+                        <div class="circular-progress" data-percent="90">
+                            <svg>
+                                <circle cx="70" cy="70" r="60"></circle>
+                                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+                            </svg>
+                            <div class="circular-number">
+                                <span class="percent-value">0</span>%
+                            </div>
+                        </div>
+                        <p class="circular-label">Design</p>
+                    </div>
+                    <div class="circular-skill">
+                        <div class="circular-progress" data-percent="85">
+                            <svg>
+                                <circle cx="70" cy="70" r="60"></circle>
+                                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+                            </svg>
+                            <div class="circular-number">
+                                <span class="percent-value">0</span>%
+                            </div>
+                        </div>
+                        <p class="circular-label">Development</p>
+                    </div>
+                    <div class="circular-skill">
+                        <div class="circular-progress" data-percent="88">
+                            <svg>
+                                <circle cx="70" cy="70" r="60"></circle>
+                                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+                            </svg>
+                            <div class="circular-number">
+                                <span class="percent-value">0</span>%
+                            </div>
+                        </div>
+                        <p class="circular-label">Problem Solving</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Client Feedback</span>
+                <h2 class="section-title">Testimonials</h2>
+            </div>
+            <div class="testimonials-slider">
+                <button class="slider-btn prev-btn" id="prev-testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonials-wrapper" id="testimonials-wrapper">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Client" class="testimonial-img">
+                            <div class="testimonial-info">
+                                <h4>John Anderson</h4>
+                                <p>CEO, TechStart Inc.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Aayoush delivered an exceptional website that exceeded our expectations.
+                            His attention to detail and creative approach made the entire process smooth
+                            and enjoyable. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Client" class="testimonial-img">
+                            <div class="testimonial-info">
+                                <h4>Sarah Mitchell</h4>
+                                <p>Founder, DesignHub</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Working with Aayoush was a game-changer for our brand. The UI/UX design
+                            was intuitive and beautiful, resulting in a 40% increase in user engagement.
+                            Absolutely brilliant work!"
+                        </p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="Client" class="testimonial-img">
+                            <div class="testimonial-info">
+                                <h4>Michael Chen</h4>
+                                <p>Product Manager, InnovateLab</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Professional, responsive, and incredibly talented. Aayoush transformed our
+                            vision into reality with a stunning web application. His expertise in both
+                            design and development is truly impressive."
+                        </p>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" id="next-testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="testimonial-dots" id="testimonial-dots"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        Have a project in mind or want to collaborate? I'd love to hear from you.
+                        Drop me a message and let's create something amazing together!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>aayoush.dahal@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+977 98XX XXXXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Kathmandu, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
+                        <a href="https://behance.net" target="_blank"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="form-error" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <span class="form-error" id="subject-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                            <span class="form-error" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-success" id="form-success">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Message sent successfully! I'll get back to you soon.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">AD<span>.</span></a>
+                    <p>Crafting digital experiences with passion and precision.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="space-y-6">
-                    <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="font-medium text-gray-300">UI/UX Design</span>
-                            <span class="text-gray-300">80%</span>
-                        </div>
-                        <div class="h-2 bg-gray-700 rounded-full">
-                            <div class="h-2 bg-gradient-to-r from-custom to-blue-500 rounded-full" style="width: 80%">
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="font-medium text-gray-300">Web Design</span>
-                            <span class="text-gray-300">90%</span>
-                        </div>
-                        <div class="h-2 bg-gray-700 rounded-full">
-                            <div class="h-2 bg-gradient-to-r from-custom to-purple-500 rounded-full" style="width: 90%">
-                            </div>
-                        </div>
-                    </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Design</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get latest updates and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="projects" class="py-20 bg-gray-900">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-16">Recent Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div
-                    class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="assets/ecommerce.jpg"
-                        alt="Project 1" class="w-full h-48 object-cover" />
-                    <div class="p-6">
-                        <h3 class="font-semibold text-lg mb-2 text-gray-100">E-commerce Website Redesign</h3>
-                        <p class="text-gray-400 mb-4">A complete redesign of an e-commerce platform focusing on user
-                            experience and conversion optimization.</p>
-                        <a href="#" class="text-custom hover:text-custom/80 font-medium">View Project →</a>
-                    </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aayoush Dahal. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
                 </div>
-                <div
-                    class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="assets/fitnessapp.jpg"
-                        alt="Project 2" class="w-full h-48 object-cover" />
-                    <div class="p-6">
-                        <h3 class="font-semibold text-lg mb-2 text-gray-100">Fitness App UI Design</h3>
-                        <p class="text-gray-400 mb-4">Mobile app design for a fitness tracking platform with intuitive
-                            user interface and smooth interactions.</p>
-                        <a href="#" class="text-custom hover:text-custom/80 font-medium">View Project →</a>
-                    </div>
-                </div>
-                <div
-                    class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="assets/dataanalysis.png"
-                        alt="Project 3" class="w-full h-48 object-cover" />
-                    <div class="p-6">
-                        <h3 class="font-semibold text-lg mb-2 text-gray-100">Analytics Dashboard</h3>
-                        <p class="text-gray-400 mb-4">Data visualization dashboard design for a financial analytics
-                            platform with complex data representation.</p>
-                        <a href="#" class="text-custom hover:text-custom/80 font-medium">View Project →</a>
-                    </div>
-                </div>
-                <div
-                    class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <img src="assets/socialmedia.jpg"
-                        alt="Project 4" class="w-full h-48 object-cover" />
-                    <div class="p-6">
-                        <h3 class="font-semibold text-lg mb-2 text-gray-100">Social Media App Design</h3>
-                        <p class="text-gray-400 mb-4">Modern social platform interface with focus on user engagement and
-                            content sharing.</p>
-                        <a href="#" class="text-custom hover:text-custom/80 font-medium">View Project →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="py-20 bg-gray-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-16">Get In Touch</h2>
-            <form class="space-y-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                    <input type="text"
-                        class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom text-gray-100"
-                        placeholder="Your name" />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                    <input type="email"
-                        class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom text-gray-100"
-                        placeholder="Your email" />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                    <textarea rows="4"
-                        class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom text-gray-100"
-                        placeholder="Your message"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-gradient-to-r from-custom via-blue-500 to-purple-500 text-white py-3 !rounded-button hover:opacity-90 transition-all shadow-lg shadow-custom/20">Send
-                    Message</button>
-            </form>
-        </div>
-    </section>
-    <footer class="bg-gradient-to-b from-gray-950 to-black text-white py-12">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-8 md:mb-0">
-                    <h3 class="text-2xl font-bold mb-2">AD.</h3>
-                    <p class="text-gray-400">Creating digital experiences that matter</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-dribbble text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>© 2024 Aayoush Dahal. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
